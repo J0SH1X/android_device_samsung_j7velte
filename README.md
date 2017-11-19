@@ -13,9 +13,9 @@ Copyright (C) 2017 Valera Chigir <valera1978@tut.by>
 
 * Description
 
-  This repository is for LineageOS on Samsung Galaxy Tab A (gtaxllte)
+  This repository is for LineageOS on Samsung Galaxy J7 NXT (j7velte)
 
-* How To Build LineageOS for Samsung Galaxy Tab A
+* How To Build LineageOS for Samsung Galaxy J7 NXT
 
   - Make a workspace
 
@@ -61,4 +61,4 @@ repo sync
 
   - Build cm14
 
-brunch gtaxllte
+brunch j7velte

@@ -16,20 +16,17 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-LOCAL_PATH := device/samsung/gtaxllte
+LOCAL_PATH := device/samsung/j7velte
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-
-PRODUCT_CHARACTERISTICS := tablet
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 # Boot animation
-TARGET_SCREEN_WIDTH := 1200
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_BOOTANIMATION_HALF_RES := true
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
 
 # Flat device tree for boot image
 #PRODUCT_PACKAGES += \
@@ -172,8 +169,7 @@ PRODUCT_COPY_FILES += \
 
 # Keys
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:/system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/configs/keylayout/sec_touchscreen.kl:/system/usr/keylayout/sec_touchscreen.kl
+    $(LOCAL_PATH)/configs/keylayout/Generic.kl:/system/usr/keylayout/Generic.kl
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
@@ -198,4 +194,4 @@ $(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
 $(call inherit-product, hardware/samsung_slsi-cm/exynos7870/exynos7870.mk)
 
 # call the proprietary setup
-$(call inherit-product, vendor/samsung/gtaxllte/gtaxllte-vendor.mk)
+$(call inherit-product, vendor/samsung/j7velte/j7velte-vendor.mk)

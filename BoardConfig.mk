@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/gtaxllte
+LOCAL_PATH := device/samsung/j7velte
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -64,7 +64,7 @@ KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aa
 
 # Kernel config
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos7870
-TARGET_KERNEL_CONFIG := lineage-gtaxllte_defconfig
+TARGET_KERNEL_CONFIG := lineage-j7velte_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 33554432
@@ -167,7 +167,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
 #RECOVERY_VARIANT := twrp
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.samsungexynos7870
-TARGET_OTA_ASSERT_DEVICE := gtaxllte
+TARGET_OTA_ASSERT_DEVICE := j7velte
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
