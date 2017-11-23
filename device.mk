@@ -41,7 +41,7 @@ PRODUCT_PACKAGES += \
 
 # cpboot-daemon
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ramdisk/cbd:root/sbin/cbd
+    $(LOCAL_PATH)/ramdisk/cbd:/system/vendor/cbd
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -79,7 +79,7 @@ PRODUCT_COPY_FILES += \
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 PRODUCT_PACKAGES += \
     gralloc.exynos5

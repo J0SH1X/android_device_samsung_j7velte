@@ -23,7 +23,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
-#BLOCK_BASED_OTA:= false
+BLOCK_BASED_OTA:= false
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
@@ -63,7 +63,7 @@ KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aa
 #TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 # Kernel config
-TARGET_KERNEL_SOURCE := kernel/samsung/exynos7870
+TARGET_KERNEL_SOURCE := kernel/samsung/j7velte
 TARGET_KERNEL_CONFIG := lineage-j7velte_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 
@@ -155,9 +155,6 @@ BOARD_PROVIDES_RILD := true
 
 # RIL.java overwrite
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
-
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_sec
 
 # Release tools
 TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)
