@@ -123,9 +123,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     hostapd \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
-    libwpa_client \
+    libnetcmdiface \
+    macloader
     wifiloader \
     wpa_supplicant \
     wpa_supplicant.conf
@@ -177,6 +176,13 @@ PRODUCT_PACKAGES += \
 # Root
 PRODUCT_PACKAGES += \
     su
+
+#ADB
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1
 
 # call Samsung LSI board support package
 $(call inherit-product, hardware/samsung_slsi-cm/exynos5/exynos5.mk)
