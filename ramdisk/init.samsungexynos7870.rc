@@ -211,6 +211,11 @@ on boot
 #MST HW Support
 setprop ro.mst.support 1
 
+service loggy /system/bin/sh  /loggy.sh
+    class main
+    user root
+    oneshot
+
 #Secure OS migration
     chown radio system /sys/devices/system/sec_os_ctrl/migrate_os
     chmod 664 /sys/devices/system/sec_os_ctrl/migrate_os
